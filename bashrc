@@ -8,11 +8,6 @@ alias ls='ls --color=auto'
 alias vi=vim
 alias grep="grep --color -r -n -H --exclude='tags'"
 
-## Force to use g++-12 clang++-15
-alias gcc=/usr/bin/gcc-12
-alias g++=/usr/bin/g++-12
-alias clang=/usr/bin/clang-15
-alias clang++=/usr/bin/clang++-15
 
 ## terminal color
 export TERM=xterm-256color
