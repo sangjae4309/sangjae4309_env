@@ -48,6 +48,7 @@ Plugin 'vim-airline/vim-airline'
 Plugin 'vim-airline/vim-airline-themes'
 Plugin 'Yggdroot/indentLine'
 Plugin 'scrooloose/nerdtree', { 'on': 'NERDTreeToggle' }
+Plugin 'ervandew/supertab'
 "" ---------------------------------------------------------
 
 call vundle#end()

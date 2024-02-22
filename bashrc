@@ -7,6 +7,8 @@ alias l='ls -CF'
 alias ls='ls --color=auto'
 alias vi=vim
 alias grep="grep --color -r -n -H --exclude='tags'"
+alias rm="rm -i"
+alias cp="cp -i"
 
 
 ## terminal color
