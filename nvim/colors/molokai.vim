@@ -11,8 +11,6 @@
 hi clear
 
 if version > 580
-    " no guarantees for version 5.8 and below, but this makes it stop
-    " complaining
     hi clear
     if exists("syntax_on")
         syntax reset
@@ -25,7 +23,6 @@ if exists("g:molokai_original")
 else
     let s:molokai_original = 0
 endif
-
 
 hi Boolean         guifg=#AE81FF
 hi Character       guifg=#E6DB74
@@ -65,7 +62,6 @@ hi ModeMsg         guifg=#E6DB74
 hi MoreMsg         guifg=#E6DB74
 hi Operator        guifg=#F92672
 
-" complete menu
 hi Pmenu           guifg=#66D9EF guibg=#000000
 hi PmenuSel                      guibg=#808080
 hi PmenuSbar                     guibg=#080808
@@ -76,7 +72,6 @@ hi PreProc         guifg=#A6E22E
 hi Question        guifg=#66D9EF
 hi Repeat          guifg=#F92672               gui=bold
 hi Search          guifg=#000000 guibg=#FFE792
-" marks
 hi SignColumn      guifg=#A6E22E guibg=#232526
 hi SpecialChar     guifg=#F92672               gui=bold
 hi SpecialComment  guifg=#7E8E91               gui=bold
@@ -131,9 +126,6 @@ else
    hi SpecialKey      guifg=#465457
 endif
 
-"
-" Support for 256-color terminal
-"
 if &t_Co > 255
    if s:molokai_original == 1
       hi Normal                   ctermbg=234
@@ -182,7 +174,6 @@ if &t_Co > 255
    hi MoreMsg         ctermfg=229
    hi Operator        ctermfg=161
 
-   " complete menu
    hi Pmenu           ctermfg=81  ctermbg=16
    hi PmenuSel        ctermfg=255 ctermbg=242
    hi PmenuSbar                   ctermbg=232
@@ -194,7 +185,6 @@ if &t_Co > 255
    hi Repeat          ctermfg=161               cterm=bold
    hi Search          ctermfg=0   ctermbg=222   cterm=NONE
 
-   " marks column
    hi SignColumn      ctermfg=118 ctermbg=235
    hi SpecialChar     ctermfg=161               cterm=bold
    hi SpecialComment  ctermfg=245               cterm=bold
@@ -217,60 +207,33 @@ if &t_Co > 255
    hi Typedef         ctermfg=81
    hi Type            ctermfg=81                cterm=none
    hi Underlined      ctermfg=244               cterm=underline
-
    hi VertSplit       ctermfg=244 ctermbg=232   cterm=bold
-   hi VisualNOS                   ctermbg=238
-   hi Visual                      ctermbg=235
+   hi VisualNOS                    ctermbg=238
    hi WarningMsg      ctermfg=231 ctermbg=238   cterm=bold
    hi WildMenu        ctermfg=81  ctermbg=16
 
-   hi Comment         ctermfg=59
-   hi CursorColumn                ctermbg=236
-   hi ColorColumn                 ctermbg=236
-   hi LineNr          ctermfg=250 ctermbg=236
-   hi NonText         ctermfg=59
+   hi TabLineFill     ctermfg=233 ctermbg=233   cterm=none
+   hi TabLine         ctermfg=244 ctermbg=233   cterm=none
 
-   hi SpecialKey      ctermfg=59
-
-   if exists("g:rehash256") && g:rehash256 == 1
-       hi Normal       ctermfg=252 ctermbg=234
-       hi CursorLine               ctermbg=236   cterm=none
-       hi CursorLineNr ctermfg=208               cterm=none
-
-       hi Boolean         ctermfg=141
-       hi Character       ctermfg=222
-       hi Number          ctermfg=141
-       hi String          ctermfg=222
-       hi Conditional     ctermfg=197               cterm=bold
-       hi Constant        ctermfg=141               cterm=bold
-
-       hi DiffDelete      ctermfg=125 ctermbg=233
-
-       hi Directory       ctermfg=154               cterm=bold
-       hi Error           ctermfg=222 ctermbg=233
-       hi Exception       ctermfg=154               cterm=bold
-       hi Float           ctermfg=141
-       hi Function        ctermfg=154
-       hi Identifier      ctermfg=208
-
-       hi Keyword         ctermfg=197               cterm=bold
-       hi Operator        ctermfg=197
-       hi PreCondit       ctermfg=154               cterm=bold
-       hi PreProc         ctermfg=154
-       hi Repeat          ctermfg=197               cterm=bold
-
-       hi Statement       ctermfg=197               cterm=bold
-       hi Tag             ctermfg=197
-       hi Title           ctermfg=203
-       hi Visual                      ctermbg=238
-
+   if s:molokai_original == 1
+       hi Normal                   ctermbg=234
+       hi Comment       ctermfg=59
+       hi CursorLine               ctermbg=235   cterm=none
+       hi CursorColumn             ctermbg=235
+       hi ColorColumn              ctermbg=235
+       hi LineNr          ctermfg=250 ctermbg=235
+       hi NonText         ctermfg=59
+       hi SpecialKey      ctermfg=59
+   else
+       hi Normal          ctermfg=252 ctermbg=233
        hi Comment         ctermfg=244
+       hi CursorLine                    ctermbg=234
+       hi CursorColumn                  ctermbg=234
+       hi ColorColumn                   ctermbg=234
        hi LineNr          ctermfg=239 ctermbg=235
        hi NonText         ctermfg=239
        hi SpecialKey      ctermfg=239
    endif
 endif
 
-" Must be at the end, because of ctermbg=234 bug.
-" https://groups.google.com/forum/#!msg/vim_dev/afPqwAFNdrU/nqh6tOM87QUJ
 set background=dark

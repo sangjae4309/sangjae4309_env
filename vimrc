@@ -43,7 +43,6 @@ call vundle#begin()
 Plugin 'VundleVim/Vundle.vim' 			" (required) let Vundle manage Vundle
 
 "" --------------- Your Plugin Here ------------------------
-Plugin 'octol/vim-cpp-enhanced-highlight'
 Plugin 'vim-airline/vim-airline'
 Plugin 'vim-airline/vim-airline-themes'
 Plugin 'Yggdroot/indentLine'
