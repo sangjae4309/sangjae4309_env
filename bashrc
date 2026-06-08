@@ -1,4 +1,11 @@
+export PATH="$HOME/.local/bin:$PATH"
 
+#FPGA
+export LANG=en_US.UTF-8
+export LC_ALL=en_US.UTF-8
+#source /tools/Xilinx/Vitis/2023.2/settings64.sh
+#source /tools/Xilinx/Vitis/2023.2/settings64.sh
+#source /opt/xilinx/xrt/setup.sh
 
 # some more ls aliases
 alias ll='ls -alF'
